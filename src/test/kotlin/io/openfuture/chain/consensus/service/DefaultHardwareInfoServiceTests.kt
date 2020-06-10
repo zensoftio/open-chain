@@ -7,7 +7,7 @@ import org.junit.Test
 
 class DefaultHardwareInfoServiceTests() : ServiceTests() {
 
-    private val service = DefaultHardwareInfoService()
+    val service = DefaultHardwareInfoService()
 
 
     @Test
