@@ -23,7 +23,7 @@ unit-tests:
   before_script:
     - export GRADLE_USER_HOME=`pwd`/.gradle
   script:
-    - ./gradlew check
+    - ./gradlew check -i
   after_script:
     - cat build/reports/jacoco/test/html/index.html
   coverage: '/Total.*?([0-9]{1,3})%/'
