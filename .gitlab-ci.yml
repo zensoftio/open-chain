@@ -19,11 +19,11 @@ variables:
 ###########################
 unit-tests:
   stage: test
-  image: openjdk:8-jdk
+  image: openjdk:12-jdk
   before_script:
     - export GRADLE_USER_HOME=`pwd`/.gradle
   script:
-    - ./gradlew check
+    - ./gradlew check -i
   after_script:
     - cat build/reports/jacoco/test/html/index.html
   coverage: '/Total.*?([0-9]{1,3})%/'
@@ -42,7 +42,7 @@ unit-tests:
 ###########################
 build-jar:
   stage: build
-  image: openjdk:8-jdk
+  image: openjdk:12-jdk
   dependencies: []
   before_script:
     - export GRADLE_USER_HOME=`pwd`/.gradle

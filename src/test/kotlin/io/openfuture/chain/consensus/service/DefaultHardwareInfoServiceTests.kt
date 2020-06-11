@@ -3,14 +3,16 @@ package io.openfuture.chain.consensus.service
 import io.openfuture.chain.config.ServiceTests
 import io.openfuture.chain.core.service.DefaultHardwareInfoService
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.Ignore
 import org.junit.Test
 
 class DefaultHardwareInfoServiceTests() : ServiceTests() {
 
-    private val service = DefaultHardwareInfoService()
+    val service = DefaultHardwareInfoService()
 
 
     @Test
+    @Ignore("environment specific test")
     fun getHardwareInfoShouldReturnCpuRamStorageNetworkInformation() {
         val hardwareInfo = service.getHardwareInfo()
 
@@ -32,6 +34,7 @@ class DefaultHardwareInfoServiceTests() : ServiceTests() {
     }
 
     @Test
+    @Ignore("environment specific test")
     fun getCpuInfoShouldReturnCpuInformation() {
         val cpuInfo = service.getCpuInfo()
 
@@ -42,6 +45,7 @@ class DefaultHardwareInfoServiceTests() : ServiceTests() {
     }
 
     @Test
+    @Ignore("environment specific test")
     fun getRamInfoShouldReturnRamInformation() {
         val ramInfo = service.getRamInfo()
 
@@ -52,6 +56,7 @@ class DefaultHardwareInfoServiceTests() : ServiceTests() {
     }
 
     @Test
+    @Ignore("environment specific test")
     fun getStorageInfoShouldReturnStorageInformation() {
         val diskStorageInfo = service.getDiskStorageInfo()
 
@@ -62,6 +67,7 @@ class DefaultHardwareInfoServiceTests() : ServiceTests() {
     }
 
     @Test
+    @Ignore("environment specific test")
     fun getNetworksInfoShouldNetworkInformation() {
         val networksInfo = service.getNetworksInfo()
 
